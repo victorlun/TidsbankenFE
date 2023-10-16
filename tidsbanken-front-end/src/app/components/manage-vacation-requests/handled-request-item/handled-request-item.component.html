@@ -1,0 +1,26 @@
+<div class="container" [class.clickable]="hasComments" (click)="hasComments && flipCommentDropDown()">
+  <div class="first-row">
+    <!-- Request and response data -->
+    <p class="employee-name">{{ data.employeeName }}</p>
+    <p class="dates">{{ data.startDate }} - {{ data.endDate }}</p>
+    <p class="type">{{ data.vacationType }}</p>
+    <p class="response" [ngStyle]="{'color': getStatusColor(data.status)}">{{ data.status }}</p>
+    
+    <!-- Arrow to hide and show comments -->
+    <div class="show-hide-comments" [class.clickable]="hasComments">
+      <div *ngIf="!isCommentsShowing">
+        <mat-icon (click)="hasComments && flipCommentDropDown()" class="show-comments-icon">arrow_drop_down</mat-icon>
+      </div>
+      <div *ngIf="isCommentsShowing">
+        <mat-icon (click)="hasComments && flipCommentDropDown()" class="show-comments-icon">arrow_drop_up</mat-icon>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hidden comments -->
+  <div *ngIf="isCommentsShowing" class="comment-section">
+    <p class="request-comment comment" *ngIf="data.requestComment !== null"> {{ data.requestComment }}</p>
+    <p class="response-comment comment" *ngIf="data.responseComment !== null">{{ data.responseComment }}</p>
+  </div>
+</div>
+  

@@ -1,0 +1,57 @@
+.container {
+    padding: 24px 16px 32px 16px;
+    border-top: 1px solid #ccc;
+  }
+
+  .first-row {
+    display: flex;
+  }
+
+  .first-row > p {
+    width: 175px;
+    margin-right: 50px;
+  }
+
+  .show-hide-comments {
+    width: 20px;
+  }
+
+  .response {
+    margin-right: 0;
+  }
+
+  .show-hide-comments {
+    margin-right: 0;
+  }
+
+  .comment-section {
+    display: flex;
+    padding-top: 20px;
+  }
+
+  .request-comment {
+    width: 665px;
+    margin-right: 10px;
+  }
+
+  .show-comments-icon {
+    scale: 1.3;
+  }
+
+  .response, .employee-name {
+    font-weight: bold;
+  }
+
+   // Hover styling
+   .container:hover .employee-name, 
+   .container:hover .dates, 
+   .container:hover .type,
+   .container:hover mat-icon {
+     color: rgb(206, 206, 206);
+   }
+
+   .container:hover .response {
+    font-weight: normal;
+    color: #e6e3ca !important;
+}
+  

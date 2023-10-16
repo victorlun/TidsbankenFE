@@ -1,0 +1,99 @@
+@import './assets/scheduler-themes/monthcalendar.css';
+@import './assets/scheduler-themes/employeesscheduler.css';
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Source+Serif+4:opsz,wght@8..60,200;8..60,400&display=swap');
+
+:root {
+    --approved-color: #A6DE79;
+    --denied-color: #DE7979;
+    --pending-color: #DEC279;
+    --super-light-blue: #e6e8f1;
+    --light-blue: #708AF4;
+    --medium-blue: #5062AD;
+    --light-gray-border: #ececec;
+    --medium-gray-border: #E6E6E6;
+    --gray-frame-background: #FCFCFC;
+    --dark-gray-column-headers: rgb(134, 134, 134);
+}
+
+html {
+    min-height: 100%;
+    width: 100%;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+}
+
+html, body { height: 100%; }
+body { margin: 0; }
+
+body, h1, h2, h3, h4, p, a, form, mat-label, input, mat-hint, mat-error, mat-radio-button, mat-form-field textarea { font-family: 'Source Serif 4', serif !important;}
+
+.content-next-to-sidebar {
+    width: calc(100% - 270px);
+    margin-left: 270px;
+}
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 50px;
+    height: 100%;
+}
+
+.component-frame {
+    background-color: #FCFCFC;
+    border: solid 1px #E6E6E6;
+    border-radius: 10px;
+    padding: 45px 25px;
+    width: 1000px;
+    margin: 25px auto 50px auto;
+}
+
+.component-frame h2 {
+    margin-bottom: 40px;
+}
+
+h2 {
+    width: 1000px;
+    margin: 0 auto 50px auto !important;
+    padding-left: 20px;
+    font-size: 24px !important;
+}
+
+.submit-button {
+    background: linear-gradient(to right, var(--medium-blue), var(--light-blue));
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+    padding: 0.5rem;
+}
+
+.submit-button:hover {
+    color: #E6E6E6;
+    background: none;
+    background-color: var(--medium-blue);
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.clickable {
+    cursor: pointer;
+}

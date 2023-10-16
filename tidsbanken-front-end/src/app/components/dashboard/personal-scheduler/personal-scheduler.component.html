@@ -1,0 +1,25 @@
+<div class="month-calendar-container component-frame">
+    <div class="navigation">
+        <!-- Arrow last month -->
+        <button class="switch-month-button clickable" (click)="switchMonth(-1)"><mat-icon>navigate_before</mat-icon></button>
+        <!-- Month YYYY title -->
+        <div>
+            <h2 (click)="toggleDatePicker()">{{MONTH_NAMES[currentMonth]}} {{currentYear}}</h2>
+        </div>
+        <!-- Arrow next month -->
+        <button class="switch-month-button clickable" (click)="switchMonth(1)"><mat-icon>navigate_next</mat-icon></button>
+    </div>
+
+    <!-- Daypilot calendar-->
+    <daypilot-month #calendar [config]="config" [events]="events"></daypilot-month>
+
+    <!-- Legend to know what the colors stand for -->
+    <div class="legend-container">
+        <mat-icon class="pending-square">stop</mat-icon>
+        <p class="legend-title">Pending</p>
+        <mat-icon class="approved-square">stop</mat-icon>
+        <p class="legend-title">Approved</p>
+    </div>
+</div>
+
+

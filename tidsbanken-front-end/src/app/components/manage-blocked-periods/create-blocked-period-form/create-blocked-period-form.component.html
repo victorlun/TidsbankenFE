@@ -1,0 +1,46 @@
+<h2>Create Blocked Period</h2>
+<div class="component-frame request-vacation-form-container">
+  <form
+    class="request-vacation-form"
+    [formGroup]="createBlockedPeriodForm"
+    (ngSubmit)="createBlockedPeriod()"
+  >
+    <!-- Date range picker -->
+    <div class="date-range-picker">
+      <mat-error
+        *ngIf="
+          createBlockedPeriodForm.get('startDate')?.hasError('required') ||
+          createBlockedPeriodForm.get('endDate')?.hasError('required')
+        "
+      >
+        Start and end date are required
+      </mat-error>
+      <mat-form-field appearance="fill">
+        <mat-label>Date Range</mat-label>
+        <mat-date-range-input
+          [rangePicker]="picker"
+          [formGroup]="createBlockedPeriodForm"
+          [dateFilter]="rangeFilter"
+        >
+          <input
+            matStartDate
+            formControlName="startDate"
+            placeholder="Start date"
+          />
+          <input matEndDate formControlName="endDate" placeholder="End date" />
+        </mat-date-range-input>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+
+    <button
+      class="submit-button clickable"
+      mat-raised-button
+      type="submit"
+      [disabled]="createBlockedPeriodForm.invalid"
+    >
+      Create
+    </button>
+  </form>
+</div>

@@ -1,0 +1,51 @@
+// Structurizing
+.request-frame {
+    border-top: solid 1px #E6E6E6;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+}
+
+.request-response-container {
+    display: flex;
+}
+
+.table-column {
+    width: 250px;
+    padding: 20px;
+}
+
+.data-column-container {
+    display: flex;
+}
+
+.show-comments-icon-container {
+    justify-content: flex;
+    justify-items: center;
+    width: auto;
+}
+
+//structurizing end
+
+.request-frame h3, .response {
+    font-weight: bold;
+}
+
+.show-comments-icon {
+    padding-top: 8px;
+    scale: 1.3;
+}
+
+.request-frame:hover .dates, .request-frame:hover .show-comments-icon, .request-frame:hover .type {
+    color: rgb(206, 206, 206) !important;
+}
+
+.request-frame:hover .response {
+    font-weight: normal;
+    color: #e6e3ca !important;
+}
+
+p {
+    margin-bottom: 0;
+}
+

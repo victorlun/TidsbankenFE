@@ -1,0 +1,57 @@
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 12px;
+  border-bottom: 1px solid #eaeaea;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li span {
+  color: #555;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.period-info {
+  flex: 1;
+}
+
+.delete-button {
+  background: none;
+  color: var(--denied-color);
+  border: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-right: 20px;
+}
+
+.delete-button:hover {
+  color: #cc0000;
+}
+
+.end-date {
+  margin-left: 100px; /* Adds horizontal space before and after each span */
+}
+
+.separator {
+  flex-grow: 1; /* Takes up any available space */
+}

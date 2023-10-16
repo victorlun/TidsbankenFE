@@ -1,0 +1,46 @@
+.header-navigation {
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: row-reverse; 
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: solid 2px var(--light-gray-border);
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+  
+    div {
+      margin-right: 10px; 
+    }
+
+    p {
+        margin: 0;
+    }
+  
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  
+    a:hover {
+      text-decoration: underline;
+    }
+  
+    button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  
+    button:hover {
+      text-decoration: underline;
+    }
+
+    .user-icon img {
+      height: 35px;
+      width: auto;
+    }
+  }

@@ -1,0 +1,16 @@
+<h2>Request History</h2>
+<div class="component-frame request-history-container">
+    <!-- Column headers -->
+    <div *ngIf="!isHistoryEmpty" class="column-headers">
+        <p>Dates</p>
+        <p>Type</p>
+        <p>Response</p>
+    </div>
+    
+    <!-- History list of items -->
+    <div *ngIf="!isHistoryEmpty" ngFor="let request of requests">
+        <app-vacation-request-history-item *ngFor="let request of requests" [data]="request"></app-vacation-request-history-item>
+    </div>
+
+    <p *ngIf="isHistoryEmpty">You have no requests</p>
+</div>

@@ -1,0 +1,16 @@
+<header class="header-navigation">
+    <nav>
+        <p>{{user?.firstName}} {{user?.lastName}}</p>
+        <div class="user-icon">
+            <button mat-icon-button [matMenuTriggerFor]="userMenu">
+                <img src="../../assets/icons/user.png" alt="Gray user icon link">
+            </button>
+
+            <mat-menu #userMenu="matMenu">
+                <button mat-menu-item routerLink="/profile">Profile</button>
+                <button mat-menu-item routerLink="/settings">Settings</button>
+                <button mat-menu-item *ngIf="authenticated" (click)="logout()">Logout</button>
+            </mat-menu>
+        </div>
+    </nav>
+</header>

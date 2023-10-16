@@ -1,0 +1,30 @@
+.request-vacation-form-container {
+  height: 300px;
+}
+.component-frame {
+  margin-bottom: 100px;
+}
+
+form,
+mat-radio-group {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  margin: 10px 0;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.vacation-type-label,
+.date-range-label {
+  font-size: 1.2em;
+  padding-bottom: 10px;
+}
+
+.date-range-error {
+  margin-top: 0;
+}

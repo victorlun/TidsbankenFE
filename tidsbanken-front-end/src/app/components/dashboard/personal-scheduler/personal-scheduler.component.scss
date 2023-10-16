@@ -1,0 +1,69 @@
+.month-calendar-container {
+    max-width: 100%;  // Ensure it doesn't exceed the viewport width
+    margin: 0 auto;  // Center the container horizontally
+    padding: 20px;  // Add padding for spacing if needed
+    width: 1300px;
+  }
+  
+  .my-vacations {
+    text-align: center;
+    padding: 40px;
+    font-size: 24px;
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center; // Vertically align items in the navigation
+    margin-bottom: 10px;
+  }
+
+  .navigation h2 {
+    width: auto;
+    padding: 0;
+    margin: 0 5px 8px 5px !important;
+  }
+  
+  .switch-month-button {
+    color: black;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+
+  .switch-month-button:hover mat-icon{
+    color: #ccc;
+  }
+
+  .legend-container {
+    display: flex;
+    margin: 25px 10px;
+  }
+
+  .legend-title {
+    margin-right: 10px;
+  }
+
+  .pending-square {
+    color: var(--pending-color);
+  }
+
+  .approved-square {
+    color: var(--approved-color);
+  }
+  
+  /* Example media query for responsiveness */
+  @media screen and (max-width: 768px) {
+    .month-calendar-container {
+      max-width: 100%; // Adjust the max-width as needed for smaller screens
+    }
+  
+    .navigation {
+      flex-direction: column; // Stack navigation items vertically for small screens
+      text-align: center; // Center-align text in navigation
+    }
+  
+    .switch-month-button {
+      margin-top: 10px; // Add spacing between buttons on small screens
+    }
+  }

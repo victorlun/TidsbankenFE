@@ -1,0 +1,21 @@
+/* Style for the header */
+.header {
+    background: linear-gradient(to bottom right, #000000, #3B3F5F);
+    padding: 20px 0 0 20px; 
+    display: flex;
+    height: 70px;
+  }
+  
+  .header img {
+    display: inline-block;
+    height: 36px;
+    width: auto;
+    margin-right: 10px;
+  }
+  
+  /* Style for the header title */
+.header-title {
+    color: #c2d5f1; 
+    font-size: 24px;
+    margin: 0; 
+}

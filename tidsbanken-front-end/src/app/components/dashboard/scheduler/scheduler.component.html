@@ -1,0 +1,17 @@
+<div class="calendar-container component-frame">
+
+  <div class="navigation">
+    <!-- Arrow last month -->
+    <button class="switch-month-button" (click)="switchMonth(-1)"><mat-icon>navigate_before</mat-icon></button>
+    <!-- Month YYYY title -->
+    <h2>{{MONTH_NAMES[currentMonth]}} {{currentYear}}</h2>
+    <!-- Arrow next month -->
+    <button class="switch-month-button" (click)="switchMonth(1)"><mat-icon>navigate_next</mat-icon></button>
+  </div>
+
+  <!-- Daypilot scheduler -->
+  <div>
+    <daypilot-scheduler #scheduler [config]="config" [events]="vacations"></daypilot-scheduler>
+  </div>
+  
+</div>

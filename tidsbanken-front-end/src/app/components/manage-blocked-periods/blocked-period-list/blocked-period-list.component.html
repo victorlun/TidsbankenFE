@@ -1,0 +1,18 @@
+<h2>Blocked Periods</h2>
+<div class="component-frame">
+  <ul>
+    <li *ngFor="let period of blockedPeriods" class="list-item">
+      <div class="period-info">
+        <span class="start-date">Start: {{ period.startDate }}</span>
+        <span class="separator"></span>
+        <span class="end-date">End: {{ period.endDate }}</span>
+      </div>
+      <button
+        class="delete-button clickable"
+        (click)="deletePeriod(period.blockedPeriodId)"
+      >
+        Delete
+      </button>
+    </li>
+  </ul>
+</div>

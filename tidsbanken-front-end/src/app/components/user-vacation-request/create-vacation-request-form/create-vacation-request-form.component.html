@@ -1,0 +1,65 @@
+<h2>Request Vacation</h2>
+<div class="component-frame request-vacation-form-container">
+    <form class="request-vacation-form"
+        [formGroup]="requestVacationForm"
+        (ngSubmit)="postVacationRequest()"
+    >
+        <!-- Date range picker -->
+        <div class="date-range-picker" *ngIf="isBlockedPeriodsLoaded">
+            <label class="date-range-label">Dates</label>
+            <mat-error *ngIf="requestVacationForm.get('startDate')?.hasError('required') || requestVacationForm.get('endDate')?.hasError('required')">
+                Start and end date are required
+            </mat-error>
+            <mat-form-field>
+                <mat-label>
+                    MM/DD/YYYY - MM/DD/YYYY
+                </mat-label>
+                <mat-date-range-input 
+                    [rangePicker]="picker" 
+                    [dateFilter]="rangeFilter"
+                >
+                    <input matStartDate placeholder="Start date" formControlName="startDate">
+                    <input matEndDate placeholder="End date" formControlName="endDate">
+                </mat-date-range-input>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-date-range-picker #picker></mat-date-range-picker>
+            </mat-form-field>
+        </div>
+
+        <!-- Vacation type radio buttons -->
+        <div class="vacation-type">
+            <mat-radio-group formControlName="vacationType">
+                <mat-label class="vacation-type-label">Vacation Type</mat-label>
+                <mat-error *ngIf="requestVacationForm.get('vacationType')?.hasError('required') && !requestVacationForm.get('vacationType')?.touched">
+                    Vacation type is required
+                </mat-error>
+                <div>
+                    <mat-radio-button
+                        *ngFor="let type of vacationTypes"
+                        [value]="type">
+                        {{type}}
+                    </mat-radio-button>
+                </div>
+            </mat-radio-group>
+        </div>
+
+        <!-- Additional notes textfield -->
+        <div class="request-notes">
+            <mat-form-field>
+                <textarea matInput formControlName="notes" rows="5" placeholder="Reason or additional notes for requests..."></textarea>
+            </mat-form-field>
+            <mat-error *ngIf="requestVacationForm.get('notes')?.hasError('required')">
+                Vacation type or reason
+            </mat-error>
+        </div>
+
+        <!-- Submit button -->
+        <button class="submit-button clickable"
+            mat-raised-button
+            type="submit"
+            [disabled]="!requestVacationForm.valid"
+        >
+            Send
+        </button>
+    </form>
+</div>

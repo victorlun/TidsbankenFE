@@ -1,0 +1,25 @@
+<div class="container component-frame">
+  <h1>Profile</h1>
+    <div class="header">
+      <p class="vacation-days-title">Vacation Days 2023</p>
+    </div>
+  
+    <div class="days-info">
+      <div class="days-item">
+        <h3>Used Days</h3>
+        <p>{{ usedDays$ | async }}</p>
+
+      </div>
+      <div class="days-item">
+        <h3>Days Left</h3>
+        <p>{{ remainingDays$ | async }}</p>
+      </div>
+    </div>
+  
+    <div class="btn-container">
+      <button class="submit-button" (click)="goToVacationRequests()">Request Vacation</button>
+    </div>
+    
+  
+  </div>
+  

@@ -1,0 +1,13 @@
+<h2>Handled Requests</h2>
+<div class="component-frame">
+    <div class="container" *ngIf="!listIsEmpty">
+        <p>Employee</p>
+        <p>Dates</p>
+        <p class="type-title">Type</p>
+        <p>Response</p>
+    </div>
+    <div ngFor="let request of handledRequests" *ngIf="!listIsEmpty">
+        <app-handled-request-item *ngFor="let request of handledRequests" [data]="request"></app-handled-request-item>
+    </div>
+    <p *ngIf="listIsEmpty">You have no handled requests!</p>
+</div>

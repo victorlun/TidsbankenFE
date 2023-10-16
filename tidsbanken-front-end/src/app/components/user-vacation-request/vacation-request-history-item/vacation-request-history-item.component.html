@@ -1,0 +1,36 @@
+<div class="request-frame" [class.clickable]="hasComments" (click)="hasComments && flipCommentDropDown()">
+    <div class="request-response-container">
+        <!-- Request column -->
+        <div class="request-column">
+            <div class="data-column-container">
+                <div class="table-column">
+                    <p class="dates" *ngIf="data.startDate != data.endDate"> {{data.startDate}} - {{data.endDate}}</p>
+                    <p class="dates" *ngIf="data.startDate == data.endDate"> {{data.startDate}}</p>
+                </div>
+                <div class="table-column">
+                    <p class="type">{{data.vacationType}}</p>
+                </div>
+            </div>
+            <!-- Request comment that shows when flipping down-->
+            <div class="request-row">
+                <div *ngIf="isCommentsShowing" class ="table-column">
+                    <p><b *ngIf="data.requestComment !== null">Request comment:</b> {{data.requestComment}}</p>
+                </div>
+            </div>
+        </div>
+        <!-- Response column -->
+        <div class="response-column">
+            <div class="table-column">
+                <p class="response" [ngStyle]="{'color': getStatusColor(data.status)}">{{data.status}}</p>
+            </div>
+            <div *ngIf="isCommentsShowing" class="table-column">
+                <p><b *ngIf="data.responseComment !== null">Response comment:</b>{{data.responseComment}}</p>
+            </div>
+        </div>
+    </div>
+    <!-- Arrow to flip between showing and hiding -->
+    <div class="show-comments-icon-container">
+        <mat-icon class="show-comments-icon clickable" [class.clickable]="hasComments" *ngIf="!isCommentsShowing" (click)="hasComments && flipCommentDropDown()">arrow_drop_down</mat-icon> 
+        <mat-icon class="show-comments-icon clickable" [class.clickable]="hasComments" *ngIf="isCommentsShowing" (click)="hasComments && flipCommentDropDown()">arrow_drop_up</mat-icon> 
+    </div>
+</div>

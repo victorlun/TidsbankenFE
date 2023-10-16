@@ -1,0 +1,12 @@
+<h2>Unhandled Requests</h2>
+<div class="component-frame">
+    <div class="container" *ngIf="!listIsEmpty">
+        <p>Employee</p>
+        <p class="dates-title">Dates</p>
+        <p>Type</p>
+    </div>
+    <div *ngIf="!listIsEmpty" ngFor="let request of unhandledRequests">
+        <app-unhandled-request-item *ngFor="let request of unhandledRequests" [data]="request"></app-unhandled-request-item>
+    </div>
+    <p *ngIf="listIsEmpty">You have no unhandled requests!</p>
+</div>

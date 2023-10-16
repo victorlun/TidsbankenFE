@@ -1,0 +1,36 @@
+<div class="sidebar">
+    <!-- Logo -->
+    <div class="logo">
+        <a routerLink="/"> 
+            <img src="../../assets/icons/clock.png" alt="White icon clock logo">
+            <h1>Tidsbanken</h1>
+        </a>
+    </div>
+    <!-- Navigation to different pages -->
+    <nav class="sidenav">
+        <div [class.active-route]="currentRoute === 'dashboard'">
+            <a routerLink="/dashboard">
+                <mat-icon>home</mat-icon>
+                <p>Dashboard</p>
+            </a>
+        </div>
+        <div [class.active-route]="currentRoute === 'vacation-requests'">
+            <a routerLink="/vacation-requests">
+                <mat-icon>schedule</mat-icon>
+                <p>Request Vacation</p>
+            </a>
+        </div>
+        <div *ngIf="isAdmin" [class.active-route]="currentRoute === 'manage-vacation-requests'">
+            <a routerLink="/manage-vacation-requests">
+                <mat-icon>drafts</mat-icon>
+                <p>Manage Vacation Requests</p>
+            </a>
+        </div>
+        <div *ngIf="isAdmin"  [class.active-route]="currentRoute === 'manage-blocked-periods'">
+            <a routerLink="/manage-blocked-periods">
+                <mat-icon>block</mat-icon>
+                <p>Manage Blocked Periods</p>
+            </a>
+        </div>
+    </nav>
+</div>

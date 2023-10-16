@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    padding: 16px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+}
+
+.container p {
+    font-size: 1.05rem;
+    font-weight: bold;
+    width: 240px;
+}
+
+.component-frame {
+    padding-bottom: 10px;
+}

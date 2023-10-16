@@ -1,0 +1,78 @@
+// For the entire sidebar component - frame etc
+.sidebar {
+    height: 100%;
+    width: 270px; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0; 
+    background: linear-gradient(to bottom, #000000, #3B3F5F);
+    padding: 20px 0 20px 20px;
+ 
+    // Shadow around sidebar
+    -moz-box-shadow: 5px 0 5px #ccc;
+    -webkit-box-shadow: 5px 0 5px #ccc;
+    box-shadow: 5px 0 5px #ccc;  
+}
+
+.sidebar h1, .sidebar p {
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+
+// Logo
+.logo {
+    padding: 10px 0 100px 0;
+}
+
+// Tidsbanken title
+.logo h1 {
+    font-size: 30px;
+    padding: 8px 15px 0 15px;
+    color: #c2d5f1;
+}
+
+.logo a {
+    text-decoration: none;
+    display: flex;
+    justify-items: center;
+}
+
+// The actual logo
+.logo img {
+    display: inline-block;
+    height: 44px;
+    width: auto;
+}
+
+// Sidenav
+.sidenav div {
+    padding: 15px 0 15px 15px;
+    margin: 1vh 0 1vh 1vw;
+    border-radius: 10px 0 0 10px;
+}
+
+.sidenav div:hover, .active-route {
+    //background-color: #232323;
+    background-color: #2b2e44;
+    border-radius: 10 0 0 10;
+}
+
+.sidenav a {
+    text-decoration: none;
+    display: flex;
+    justify-items: center;
+}
+
+// icons for navigation
+.sidenav mat-icon {
+    height: auto;
+    margin-right: 15px;
+    color: white;
+}
+
+.sidenav p {
+    padding-top: 4px;
+}
+
+

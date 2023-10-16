@@ -1,0 +1,50 @@
+<div class="container request-container">
+  <div (click)="hasComments && flipCommentDropDown()">
+    <div class="data" [class.clickable]="hasComments">
+      <!-- Data -->
+      <p class="employee-name" class="employee-name">{{ data.employeeName }}</p>
+      <p class="dates">
+        {{ data.startDate != data.endDate ? data.startDate + ' - ' + data.endDate : data.startDate }}
+      </p>
+      <div class="type-container">
+        <p class="type">{{ data.vacationType }}</p>
+      </div>
+      <div class="show-hide-comments" [class.clickable]="hasComments" *ngIf="hasComments">
+        <mat-icon *ngIf="!isCommentShowing" class="show-comments-icon" (click)="hasComments && flipCommentDropDown()">arrow_drop_down</mat-icon>
+        <mat-icon *ngIf="isCommentShowing" class="show-comments-icon" (click)="hasComments && flipCommentDropDown()">arrow_drop_up</mat-icon>
+      </div>
+    </div>
+    <!-- Hidden comments -->
+    <div *ngIf="isCommentShowing" class="comment-section">
+      <p>{{ data.requestComment }}</p>
+    </div>
+  </div>
+
+    <!-- Manage request form -->
+    <div class="manage-request-form-container">
+      <form class="manage-request-form" [formGroup]="manageRequestForm" (ngSubmit)="manageRequest($event.submitter.value)">
+        
+        <!-- Response comment -->
+        <div class="response-comment-container">
+          <textarea formControlName="responseComment" id="responseComment" name="responseComment" placeholder="Add a comment..." rows="3"></textarea>
+        </div>
+
+        <!-- Response answer -->
+        <div class="response-container">
+          <div class="approve-container clickable">
+            <button value="APPROVED" type="submit" name="approve" [disabled]="">
+              <mat-icon class="manage-request-icon approve-icon clickable">done</mat-icon>
+              <p>Approve</p>
+            </button>
+          </div>
+          <div class="deny-container clickable">
+            <button value="DENIED" type="submit" name="deny" [disabled]="">
+              <mat-icon class="manage-request-icon deny-icon clickable">clear</mat-icon>
+              <p>Deny</p>
+            </button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>

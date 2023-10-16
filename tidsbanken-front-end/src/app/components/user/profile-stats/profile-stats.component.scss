@@ -1,0 +1,45 @@
+.container {
+    height: 600px;
+    padding: 50px;  
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
+  p.vacation-days-title {
+    width: auto;
+    font-size: 1.17em;
+    font-weight: bold;
+  }
+
+  .header{
+    text-align: center;
+  }
+
+  .days-info {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;  
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .days-item{
+    text-align: center;
+    margin: 20px;
+  }
+
+  .btn-container {
+    text-align: center;
+    margin-top: 8px;  
+  }
+  
+  button {
+    padding: 12px 16px;  
+    font-size: 0.9em;  
+    background: none;
+    background-color: var(--light-blue);
+  }
+  
